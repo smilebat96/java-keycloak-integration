@@ -7,12 +7,17 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 
 import com.edw.service.JwtService;
 import com.edw.service.KeycloakRestService;
+import org.keycloak.OAuth2Constants;
+import org.keycloak.admin.client.Keycloak;
+import org.keycloak.admin.client.KeycloakBuilder;
+import org.keycloak.representations.AccessTokenResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.NotAuthorizedException;
 import java.security.interfaces.RSAPublicKey;
 import java.util.*;
 
@@ -100,9 +105,20 @@ public class IndexController {
         }
     }
 
-    @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE)
-    public String login(String username, String password) {
-        return restService.login(username, password);
+    @PostMapping(value = "/getAccessToken", produces = MediaType.APPLICATION_JSON_VALUE)
+    public AccessTokenResponse login(String username, String password) {
+        Keycloak keycloak = KeycloakBuilder.builder()
+                .serverUrl("http://localhost:8085/auth")
+                .realm("test-realm")
+                .username(username)
+                .password(password)
+                .grantType(OAuth2Constants.PASSWORD)
+                .clientId("cloud-gateway-client")
+                .clientSecret("bBhYzOVgFXIbjDk8T8anAo2QKSfaHDws")
+                .build();
+
+        //test@gmail.com, test
+        return keycloak.tokenManager().getAccessToken();
     }
 
     @PostMapping(value = "/logout", produces = MediaType.APPLICATION_JSON_VALUE)
