@@ -143,7 +143,7 @@
                         <configuration>
                             <username>${project.groupId}</username>
                             <password>${env.DOCKER_HUB_TOKEN}</password>
-                            <repository>registry.hub.docker.com/${dockerhub.username}/${project.artifactId}</repository>
+                            <repository>registry.hub.docker.com/${dockerhub.username}/release</repository>
                             <tag>${project.version}</tag>
                         </configuration>
                     </plugin>
