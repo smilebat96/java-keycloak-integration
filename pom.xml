@@ -4,7 +4,7 @@
 
     <groupId>EducationService</groupId>
     <artifactId>com.edw</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
 
     <packaging>jar</packaging>
     <scm>
@@ -142,7 +142,7 @@
                         <configuration>
                             <username>smilebat96</username>
                             <password>bb0802ea-2ac9-4bb0-bb7c-03f217227ad4</password>
-                            <repository>smilebat96/release</repository>
+                            <repository>registry.hub.docker.com/smilebat96/release</repository>
                             <tag>${project.version}</tag>
                         </configuration>
                     </plugin>
