@@ -20,7 +20,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <dockerhub.username>smilebat96</dockerhub.username>
+        <dockerhub.username>smilebat96@gmail.com</dockerhub.username>
         <docker.release.version>${artifactId}-${version}</docker.release.version>
     </properties>
 
