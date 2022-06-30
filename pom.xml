@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     <scm>
         <developerConnection>scm:git:https://github.com/smilebat96/java-keycloak-integration</developerConnection>
-        <tag>${artifactId}-${version}</tag>
+        <tag>${artifactId}-${version}</tag> 
     </scm>
     <parent>
         <groupId>org.springframework.boot</groupId>
