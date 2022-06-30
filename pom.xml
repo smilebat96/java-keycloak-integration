@@ -8,6 +8,10 @@
     <artifactId>com.edw</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <scm>
+        <developerConnection>scm:git:https://github.com/smilebat96/java-keycloak-integration</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
