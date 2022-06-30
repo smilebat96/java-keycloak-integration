@@ -142,4 +142,9 @@ public class IndexController {
             put("status", "hello world");
         }};
     }
+
+    @GetMapping(value = "/get")
+    public String getDemo() {
+        return "Success";
+    }
 }
