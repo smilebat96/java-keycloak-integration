@@ -4,7 +4,7 @@
 
     <groupId>EducationService</groupId>
     <artifactId>com.edw</artifactId>
-    <version>1.3.1-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
 
     <packaging>jar</packaging>
     <scm>
