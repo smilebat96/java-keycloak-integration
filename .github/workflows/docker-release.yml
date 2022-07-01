@@ -35,3 +35,7 @@ jobs:
       env:
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
       run: mvn -B release:perform -Darguments="-Dmaven.javadoc.skip=true -P docker-deploy"
+    - name: Deploy to Git Package
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      run: mvn -B deploy -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN
