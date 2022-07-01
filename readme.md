@@ -1,4 +1,4 @@
-[![Release workflow](https://github.com/smilebat96/java-keycloak-integration/actions/workflows/docker-release.yml/badge.svg)](https://github.com/smilebat96/java-keycloak-integration/actions/workflows/docker-release.yml)
+[![Release workflow](https://github.com/smilebat96/java-keycloak-integration/actions/workflows/docker-release.yml/badge.svg?branch=master&event=workflow_dispatch)](https://github.com/smilebat96/java-keycloak-integration/actions/workflows/docker-release.yml)
 
 # API Integration Example with Keycloak 
 
