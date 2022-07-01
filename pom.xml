@@ -153,6 +153,7 @@
                         <configuration>
                             <tagNameFormat>v@{project.version}</tagNameFormat>
                             <pushChanges>false</pushChanges>
+                            <updateDependencies>false</updateDependencies>
                         </configuration>
                     </plugin>
                     <plugin>
