@@ -26,8 +26,8 @@ jobs:
     - name: Prepare release
       env:
         GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-      run: mvn release:prepare -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN -Darguments="-Dmaven.javadoc.skip=true -P docker-deploy"
+      run: mvn release:prepare -DupdateDependencies=false -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN -Darguments="-Dmaven.javadoc.skip=true -P docker-deploy"
     - name: Perform release
       env:
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
-      run: mvn release:perform -Darguments=" -Dmaven.javadoc.skip=true -P docker-deploy"
+      run: mvn release:perform -DupdateDependencies=false -Darguments="-Dmaven.javadoc.skip=true -P docker-deploy"
