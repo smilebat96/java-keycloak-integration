@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     <scm>
         <developerConnection>scm:git:https://github.com/smilebat96/java-keycloak-integration</developerConnection>
-        <tag>com.edw-1.0.5</tag>
+        <tag>HEAD</tag>
     </scm>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -77,6 +77,8 @@
             <version>1.4.13</version>
         </dependency>
     </dependencies>
+
+
 
     <profiles>
         <profile>
