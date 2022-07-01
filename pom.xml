@@ -143,6 +143,7 @@
                             <password>bb0802ea-2ac9-4bb0-bb7c-03f217227ad4</password>
                             <repository>registry.hub.docker.com/smilebat96/release</repository>
                             <tag>${project.version}</tag>
+                            <skipDockerInfo>true</skipDockerInfo>
                         </configuration>
                     </plugin>
                     <plugin>

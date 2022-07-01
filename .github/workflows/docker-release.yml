@@ -26,8 +26,8 @@ jobs:
     - name: Prepare release
       env:
         GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-      run: mvn --batch-mode release:prepare -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN -Darguments="-Dmaven.javadoc.skip=true -P docker-deploy"
+      run: mvn --batch-mode release:prepare -Dusername=$GITHUB_ACTOR -Dpassword=$GITHUB_TOKEN -Darguments="-DpushChanges=false -Dmaven.javadoc.skip=true -P docker-deploy"
     - name: Perform release
       env:
         DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
-      run: mvn --batch-mode release:perform -Darguments="-Dmaven.javadoc.skip=true -P docker-deploy"
+      run: mvn --batch-mode release:perform -Darguments="-DpushChanges=false -Dmaven.javadoc.skip=true -P docker-deploy"
