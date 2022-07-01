@@ -23,6 +23,32 @@
         <dockerhub.username>smilebat96@gmail.com</dockerhub.username>
         <docker.release.version>${artifactId}-${version}</docker.release.version>
     </properties>
+    
+     <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/smilebat96/Releases</url>
+        </repository>
+    </distributionManagement>
+    
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>central-2</id>
+            <url>https://mvnrepository.com/</url>
+        </repository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/smilebat96/Releases</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <pluginRepositories>
         <pluginRepository>
