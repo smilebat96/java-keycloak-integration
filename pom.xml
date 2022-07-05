@@ -20,8 +20,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <dockerhub.username>smilebat96@gmail.com</dockerhub.username>
-        <docker.release.version>${artifactId}-${version}</docker.release.version>
+        <env.DOCKER_HUB_TOKEN></env.DOCKER_HUB_TOKEN>
     </properties>
     
      <distributionManagement>
@@ -168,7 +167,7 @@
                         </executions>
                         <configuration>
                             <username>smilebat96</username>
-                            <password>bb0802ea-2ac9-4bb0-bb7c-03f217227ad4</password>
+                            <password>${env.DOCKER_HUB_TOKEN}</password>
                             <repository>registry.hub.docker.com/smilebat96/release</repository>
                             <tag>${project.version}</tag>
                             <skipDockerInfo>true</skipDockerInfo>
